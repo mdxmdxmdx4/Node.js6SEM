@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Кафедры</title>
+</head>
+<body>
+  <div id="pulpits"></div>
+  <div id="pagination"></div>
+
+  <script>
+    let page = 1;
+    let limit = 10;
+
+    function loadPulpits() {
+      fetch(`/api/pulpitsWithTeachersCount?page=${page}`)
+        .then(response => response.json())
+        .then(pulpits => {
+          let pulpitsDiv = document.getElementById('pulpits');
+          pulpitsDiv.innerHTML = '';
+          pulpits.forEach(pulpit => {
+            let div = document.createElement('div');
+            div.innerHTML = `
+              <h2>${pulpit.PULPIT}</h2>
+              <p>Название: ${pulpit.PULPIT_NAME}</p>
+              <p>Количество преподавателей: ${pulpit._count.TEACHER}</p>
+            `;
+            pulpitsDiv.appendChild(div);
+          });
+        })
+        .catch(err => console.error(err));
+    }
+
+    function loadPagination() {
+      fetch(`/api/pulpits/count`)
+        .then(response => response.json())
+        .then(count => {
+          let totalPages = Math.ceil(count.count / limit);
+          let paginationDiv = document.getElementById('pagination');
+          paginationDiv.innerHTML = '';
+          for (let i = 1; i <= totalPages; i++) {
+            let button = document.createElement('button');
+            button.textContent = i;
+            button.addEventListener('click', () => {
+              page = i;
+              loadPulpits();
+            });
+            paginationDiv.appendChild(button);
+          }
+        })
+        .catch(err => console.error(err));
+    }
+    loadPulpits();
+    loadPagination();
+  </script>
+</body>
+</html>

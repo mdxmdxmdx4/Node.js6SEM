@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Загрузка изображения</title>
+  <style type="text/css">
+    body {
+      font-family: Arial, sans-serif;
+    }
+    form {
+      margin: 0 auto;
+      width: 300px;
+      padding: 1em;
+      border: 1px solid #CCC;
+      border-radius: 1em;
+    }
+    label {
+      display: inline-block;
+      width: 200px;
+      margin: 0 auto;
+      margin-bottom: 10px;
+      margin-top: 10px;
+    }
+    input, button {
+      font: 1em sans-serif;
+      width: 300px;
+      box-sizing: border-box;
+      border: 1px solid #999;
+    }
+    button {
+      width: auto;
+      padding: 0.5em;
+      margin-left: 100px;
+    }
+  </style>
+</head>
+<body>
+  <form action="/upload" method="post" enctype="multipart/form-data">
+    <div>
+      <label for="turtleId">ID Черепашки-ниндзя:</label>
+      <input type="number" id="turtleId" name="turtleId" required>
+    </div>
+    <div>
+      <label for="image">Выберите изображение:</label>
+      <input type="file" id="image" name="image" accept="image/*" required>
+    </div>
+    <div>
+      <button type="submit" style="margin-top:15px ;">Загрузить</button>
+    </div>
+  </form>
+</body>
+</html>
+
+
+
+
+
+
+<!-- <!DOCTYPE html>
+<html>
+<head>
+  <title>Загрузка изображения</title>
+  <style type="text/css">
+    
+  </style>
+</head>
+<body>
+  <form action="/upload" method="post" enctype="multipart/form-data">
+    <label for="turtleId">ID Черепашки-ниндзя:</label>
+    <input type="number" id="turtleId" name="turtleId" required>
+    <br/>
+    <label for="image">Выберите изображение:</label>
+    <input type="file" id="image" name="image" accept="image/*" required>
+    <br/>
+    <button type="submit">Загрузить</button>
+  </form>
+</body>
+</html> -->

@@ -1,0 +1,58 @@
+datasource db {
+  provider = "sqlite"
+  url      = "file:../XYZ.db?case=sensitive"
+}
+
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+model FACULTY {
+  ID           Int      @id @default(autoincrement())
+  FACULTY      String   @unique
+  FACULTY_NAME String?
+  PULPIT       PULPIT[]
+}
+
+model PULPIT {
+  ID           Int      @id @default(autoincrement())
+  PULPIT       String   @unique
+  PULPIT_NAME  String?
+  FACULTY      String   
+  Faculty      FACULTY  @relation(fields: [FACULTY], references: [FACULTY])
+  TEACHER      TEACHER[]
+  SUBJECT      SUBJECT[]
+}
+
+model TEACHER {
+  ID           Int      @id @default(autoincrement())
+  TEACHER      String
+  TEACHER_NAME String?
+  PULPIT       String   
+  Pulpit       PULPIT   @relation(fields: [PULPIT], references: [PULPIT])
+}
+
+model SUBJECT {
+  ID           Int      @id @default(autoincrement())
+  SUBJECT      String
+  SUBJECT_NAME String   
+  PULPIT       String   
+  Pulpit       PULPIT   @relation(fields: [PULPIT], references: [PULPIT])
+}
+
+model AUDITORIUM_TYPE {
+  ID           Int      @id @default(autoincrement())
+  AUDITORIUM_TYPE      String   @unique
+  AUDITORIUM_TYPENAME  String   
+  AUDITORIUM           AUDITORIUM[]
+}
+
+model AUDITORIUM {
+  ID           Int      @id @default(autoincrement())
+  AUDITORIUM           String   
+  AUDITORIUM_NAME      String?
+  AUDITORIUM_CAPACITY  Int?    
+  AUDITORIUM_TYPE      String   
+  Auditorium_Type      AUDITORIUM_TYPE @relation(fields: [AUDITORIUM_TYPE], references: [AUDITORIUM_TYPE])
+}

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Черепашки-ниндзя</title>
+  <style>
+    /* Добавьте здесь свои стили */
+  </style>
+</head>
+<body>
+  <div id="turtles"></div>
+  <div id="pagination"></div>
+
+  <script>
+    let page = 1;
+    let limit = 3;
+
+    function loadTurtles() {
+      fetch(`/turtles/get?page=${page}`)
+        .then(response => response.json())
+        .then(turtles => {
+          let turtlesDiv = document.getElementById('turtles');
+          turtlesDiv.innerHTML = '';
+          turtles.forEach(turtle => {
+            let div = document.createElement('div');
+            div.innerHTML = `
+              <h2>${turtle.name}</h2>
+              <p>Цвет: ${turtle.color}</p>
+            `;
+            turtlesDiv.appendChild(div);
+          });
+        })
+        .catch(err => console.error(err));
+    }
+
+    function loadPagination() {
+      fetch(`/turtles/count`)
+        .then(response => response.json())
+        .then(count => {
+          let totalPages = Math.ceil(count / limit);
+          let paginationDiv = document.getElementById('pagination');
+          paginationDiv.innerHTML = '';
+          for (let i = 1; i <= totalPages; i++) {
+            let button = document.createElement('button');
+            button.textContent = i;
+            button.addEventListener('click', () => {
+              page = i;
+              loadTurtles();
+            });
+            paginationDiv.appendChild(button);
+          }
+        })
+        .catch(err => console.error(err));
+    }
+    loadTurtles();
+    loadPagination();
+  </script>
+</body>
+</html>
