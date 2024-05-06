@@ -32,15 +32,12 @@ const turtleRoutes = require('./routes/turtleRoutes')(sequelize);
 app.use(turtleRoutes);
 
 
-
-//images
 app.use('/images', express.static('images'));
 
 app.use('/images/*', (req, res) => {
   res.status(404).json({ error: 'File not found' });
 });
 
-//---task5---//
 app.get('/upload', (req, res) => {
   res.sendFile(path.join(__dirname, 'public', 'upload.html'));
 });
@@ -66,50 +63,9 @@ app.post('/upload', upload.single('image'), async (req, res) => {
   });
 });
 
-//---task5---//
+
+
 app.listen(3000, () => {
   console.log('Server is running on port 3000');
 });
 
-
-
-//turtle
-//---pagination---
-/*app.get('/turtles', async (req, res) => {
-  let page = req.query.page || 1;
-  let limit = 3;
-  let offset = (page - 1) * limit;
-
-  try {
-    let turtles = await Turtle.findAll({ limit: limit, offset: offset });
-    res.sendFile(path.join(__dirname, 'public', 'turtles.html'));
-  } catch (err) {
-    console.error(err);
-    res.status(500).json({ error: 'Data access error'});
-  }
-});
-
-app.get('/turtles/get', async (req, res) => {
-  let page = req.query.page || 1;
-  let limit = 3;
-  let offset = (page - 1) * limit;
-
-  try {
-    let turtles = await Turtle.findAll({ limit: limit, offset: offset });
-    res.json(turtles);
-  } catch (err) {
-    console.error(err);
-    res.status(500).josn({ error: 'Data access error'});
-  }
-});
-
-app.get('/turtles/count', async (req, res) => {
-  try {
-    let count = await Turtle.count();
-    res.json(count);
-  } catch (err) {
-    console.error(err);
-    res.status(500).json({error : 'Data access error'});
-  }
-});*/
-//---pagination---
