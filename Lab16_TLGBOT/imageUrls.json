@@ -1,0 +1,50 @@
+{
+    "cat": [
+        "https://cdn2.thecatapi.com/images/MTk0MzI2Ng.jpg",
+        "https://cdn2.thecatapi.com/images/ar9.jpg",
+        "https://cdn2.thecatapi.com/images/e4a.jpg",
+        "https://cdn2.thecatapi.com/images/iI8IyNGDg.jpg",
+        "https://cdn2.thecatapi.com/images/25s.jpg",
+        "https://cdn2.thecatapi.com/images/171.jpg",
+        "https://cdn2.thecatapi.com/images/7c.gif",
+        "https://cdn2.thecatapi.com/images/MjAxOTAzNA.jpg",
+        "https://cdn2.thecatapi.com/images/b9e.jpg",
+        "https://cdn2.thecatapi.com/images/3ZLqhbgiw.jpg",
+        "https://cdn2.thecatapi.com/images/62.jpg",
+        "https://cdn2.thecatapi.com/images/MTY0Njk3MQ.jpg",
+        "https://cdn2.thecatapi.com/images/cv4.jpg"
+    ],
+    "dog": [
+        "https://cdn2.thedogapi.com/images/r1VV7pTV7.gif",
+        "https://cdn2.thedogapi.com/images/Mncs8eeby.jpg",
+        "https://cdn2.thedogapi.com/images/K5hLbTi6d.jpg",
+        "https://cdn2.thedogapi.com/images/Sk7Qbg9E7_1280.jpg",
+        "https://cdn2.thedogapi.com/images/JyQKPHV6Q.jpg",
+        "https://cdn2.thedogapi.com/images/pC7MjGeaT.jpg",
+        "https://cdn2.thedogapi.com/images/FSKQk8PVj.png",
+        "https://cdn2.thedogapi.com/images/AEMRlvJxG.jpg",
+        "https://cdn2.thedogapi.com/images/yUOiKMWGY.jpg",
+        "https://cdn2.thedogapi.com/images/SJJxjecEX_1280.jpg"
+    ],
+    "horse": [
+        "https://cs8.pikabu.ru/post_img/big/2018/01/01/9/1514820102172865251.jpg",
+        "https://img.freepik.com/free-photo/cute-horse-in-the-alps-eating-grass_661209-175.jpg?size=626&ext=jpg",
+        "https://img.freepik.com/premium-photo/horse-standing-on-field-against-sky_1048944-17283044.jpg?size=626&ext=jpg",
+        "https://img.freepik.com/premium-photo/close-up-of-a-horse_1048944-13870555.jpg?size=626&ext=jpg",
+        "https://img.freepik.com/premium-photo/horse-in-a-field_1048944-20825540.jpg?size=626&ext=jpg",
+        "https://img.freepik.com/free-photo/front-view-of-an-elegant-brown-horse-with-long-mane_181624-29024.jpg?size=626&ext=jpg",
+        "https://img.freepik.com/free-photo/brown-horse-with-white-mane-eating-grass-on-a-hill-with-pine-trees-on-the-backgroun_181624-15159.jpg?size=626&ext=jpg",
+        "https://img.freepik.com/premium-photo/close-up-of-a-horse_1048944-5798410.jpg?size=626&ext=jpg",
+        "https://img.freepik.com/premium-photo/a-horse-in-a-field-of-flowers_870544-3.jpg?size=626&ext=jpg&ga=GA1.1.2069199195.1710773684&semt=ais",
+        "https://img.freepik.com/premium-photo/horse-standing-on-field-against-sky_1048944-17568486.jpg?size=626&ext=jpg&ga=GA1.1.2069199195.1710773684&semt=ais",
+        "https://img.freepik.com/premium-photo/close-up-of-horse-against-trees_1048944-19083022.jpg?size=626&ext=jpg&ga=GA1.1.2069199195.1710773684&semt=ais"
+    ],
+    "people": [
+        "https://kartinki.pics/uploads/posts/2022-02/thumbs/1645097153_2-kartinkin-net-p-kartinki-chelovek-3.jpg",
+        "https://kartinki.pics/uploads/posts/2022-02/thumbs/1645097140_3-kartinkin-net-p-kartinki-chelovek-6.jpg",
+        "https://kartinki.pics/uploads/posts/2022-02/thumbs/1645097115_4-kartinkin-net-p-kartinki-chelovek-7.jpg",
+        "https://kartinki.pics/uploads/posts/2022-02/1645097110_6-kartinkin-net-p-kartinki-chelovek-9.jpg",
+        "https://kartinki.pics/uploads/posts/2022-02/thumbs/1645097155_8-kartinkin-net-p-kartinki-chelovek-12.png",
+        "https://kartinki.pics/uploads/posts/2022-02/1645097083_9-kartinkin-net-p-kartinki-chelovek-14.jpg"
+    ]
+}
